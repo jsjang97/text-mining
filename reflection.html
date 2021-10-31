@@ -1,14 +1,38 @@
-# text-mining
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Exercise 2</title>
+    <link rel="stylesheet" href="reflection.css" />
+  </head>
+  from newspaper import Article
+  import heapq
+  import newspaper
+  import string
+  import nltk
+  from nltk.sentiment.vader import SentimentIntensityAnalyzer
+  
+  <body>
+    <h1 class = "intro">Reflection</h1>
+    <h2 class="intro">Alex Joon Sung Jang</h2>
+    <hr />
+    <p>
         I used newspaper website as a primary source for this assignment. I have imported multiple functions like newspaper, nltk, heapq, and etcetera for text analysis. So, I first analyzed New York Post by creating the function analysis_top10_single. I found all the articles that matches the keyword I put in, vaccine, with the top 10 most frequently used words from the dictionary of each article. I wanted to find the articles in the newspaper source that matched my search interest, and found it using two functions. This functions can work with other keywords when there is other analysis approach.
-        
+    </p>
+    <p id = "sans-serif">
         For pulling related papers, I had to make dictionaries with words and frequencies (histogram) and find out which words were used most frequently. From the dictionary I was able to find top 10 most frequently used words/nouns in each articles. I first struggled with the fact that I need to pull nouns from the articles, so I needed to clean up the text of articles first. I was able to pull a meaningful result only after I removed all the conjunctions and unwanted letters. There I used the function I imported as nltk in the above, and I used classic histogram for the dictionary of each articles. Then I came up with the next function, pull_related that matches the top 10 with the keyword I selected.
-
+        <br/>
+        <br/>
         I created the function for sentiment analysis in order to get more meaningful results from this analysis and to get sense of sentiment from each newspaper source. I thought it would be meaningful to find out if Fox News were to be negative or positive about current covid situation, delta variant, and slowing vaccination rates. And I analyzed the same for NY Post.
         In order to get scores for each source, Fox News and NY Post, I needed to average the scores of each articles. It was really difficult to come up with that logic how to keep and record those scores for four different variables.
-
+    </p>
+    <p>
         Because I did my search related to covid vaccines, most of the articles that matched were very updated and new. I felt the code that I wrote was computationally expensive because it took so much time to run the functions because of the nested for loops. I still found which articles were relevant to my search interest and how the sentiment scores were.
         I was surprised to see that sentiment scores of Fox News did not reflect the typical understanding of their political stance being very conservative and anti-vaccine. The scores were not as skewed as I first expected to be, and I eventually found out that the articles from newspapers were very neutral. 
-        
+    </p>
+    <p>
         It took hours and hours to fix the coding because it took so long to run each time. I had to print some results in the middle to double check if functions are working properly to get to the right result. I felt the code I wrote could be more efficient if it did not have any nested for loops. I think the way I wrote and saved scores were very good, considering the fact that I analyzed the entire source and its articles to retrieve more accurate data.
-
-Please read the [instructions](instructions.md).
+    </p>
+  </body> 
+</html>
